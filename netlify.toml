@@ -1,0 +1,20 @@
+# Netlify config — static web/ + serverless API in netlify/functions
+[build]
+  publish = "web"
+  functions = "netlify/functions"
+
+# Pretty API paths -> functions
+[[redirects]]
+  from = "/api/pipelines"
+  to = "/.netlify/functions/pipelines"
+  status = 200
+
+[[redirects]]
+  from = "/api/test-connection/:source"
+  to = "/.netlify/functions/test-connection?source=:source"
+  status = 200
+
+[[redirects]]
+  from = "/api/config"
+  to = "/.netlify/functions/config"
+  status = 200

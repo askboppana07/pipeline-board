@@ -1,0 +1,23 @@
+{
+  "name": "devsecops-pipeline-board",
+  "version": "1.0.0",
+  "description": "Live DevSecOps release-pipeline board — Jira + Salesforce. Netlify Functions API + static web.",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "netlify:dev": "netlify dev"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "jsforce": "^3.3.0",
+    "node-fetch": "^3.3.2",
+    "@netlify/blobs": "^8.1.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  }
+}
